@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>AvoCadoRina</title>
+    <link rel="stylesheet" href='https://necolas.github.io/normalize.css/8.0.1/normalize.css'>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abel&family=Londrina+Solid&display=swap');
+
+        header {
+            width: 100vw;
+            margin: 2% 0% 0% 10%;
+        }
+
+        /* Main menu */
+        .menu {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            width: 100vw
+        }
+
+        .menu li {
+            margin: 0 30px 0 30px;
+            padding: 0;
+            display: inline-block;
+            font-family: 'Abel', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: medium;
+            color: black;
+        }
+
+        /* Logo */
+        p.menu {
+            font-family: 'Londrina Solid', cursive;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 0.8rem;
+            display: flex;
+            color: #111111;
+        }
+
+
+        .menu li:first-child {
+            margin-left: 190px;
+        }
+
+        /*Say hello*/
+        .hello {
+            width: 30%;
+            margin: 10%;
+        }
+
+        h2 .hello {
+            font-size: larger;
+            font-family: 'Londrina Solid', cursive;
+            font-style: normal;
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+
+        h1.hello {
+            font-size: xx-large;
+            font-family: Abel;
+            font-style: normal;
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+
+        p.hello {
+            font-size: medium;
+            font-family: Abel;
+            font-style: normal;
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            color: #000000;
+        }
+
+        .contact_me {
+            background: linear-gradient(87.32deg, #F68ED9 4.47%, #d69f39 95.53%);
+            box-shadow: 0px 2px 13px rgba(226, 158, 0, 0.48);
+            border-radius: 6px;
+            width: 40%;
+            height: 2.8em;
+        }
+
+        .contact_me:hover,
+        .contact_me:focus {
+            box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+            transform: translateY(-0.25em);
+        }
+
+        .photo {
+            width: 34%;
+            margin: -40% 0% 0% 40%;
+        }
+
+        /*About me*/
+        .about_me {
+            background-image: url('Ellips.png');
+            background-size: 100%;
+            width: 77%;
+            margin-left: 3%;
+        }
+
+        .text_am {
+            width: 40%;
+            background: rgba(246, 142, 217, 0.58);
+            border-radius: 14px;
+            margin: 10% 0% 0% 40%;
+            padding-top: 5%;
+            padding-bottom: 10%;
+            font-family: Abel;
+            font-style: normal;
+            font-weight: normal;
+            text-align: center;
+        }
+
+        h2 .text_am {
+            font-size: large;
+            display: flex;
+            color: #111111;
+            margin-top: -60%;
+        }
+
+        .text_am li {
+            font-size: medium;
+            letter-spacing: 0.01em;
+            color: #111111;
+            text-align: left;
+        }
+
+        .text_am p {
+            font-size: large;
+            letter-spacing: 0.01em;
+            color: #111111;
+            text-align: center;
+        }
+
+        /*For all links*/
+        a {
+            position: relative;
+            display: inline-block;
+            font-size: large;
+            font-weight: 800;
+            color: rgb(0, 0, 0);
+        }
+
+        a:focus {
+            color: rgb(235, 132, 14);
+        }
+
+        /*Skills*/
+        .UXUI {
+            background: #F68ED9;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.47);
+            border-radius: 29px;
+            width: 15%;
+            margin-left: 6%;
+            padding-top: 4%;
+            padding-bottom: 4%;
+            text-align: center;
+            font-family: Abel;
+            font-style: normal;
+            font-weight: normal;
+            font-size: x-large;
+        }
+
+        .LogoDesign {
+            background: #F68ED9;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.47);
+            border-radius: 29px;
+            width: 15%;
+            margin-left: 30%;
+            margin-top: -14%;
+            padding-top: 3%;
+            padding-bottom: 3%;
+            text-align: center;
+            font-family: Abel;
+            font-style: normal;
+            font-weight: normal;
+            font-size: x-large;
+        }
+
+        .IconDesign {
+            background: #F68ED9;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.47);
+            border-radius: 29px;
+            width: 15%;
+            margin-left: 53%;
+            padding-top: 3%;
+            padding-bottom: 3%;
+            margin-top: -13.5%;
+            text-align: center;
+            font-family: Abel;
+            font-style: normal;
+            font-weight: normal;
+            font-size: x-large;
+        }
+
+        .DataAnalysis {
+            background: #F68ED9;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.47);
+            border-radius: 29px;
+            width: 15%;
+            margin-left: 18%;
+            padding-top: 4%;
+            padding-bottom: 4%;
+            margin-top: 3.5%;
+            text-align: center;
+            font-family: Abel;
+            font-style: normal;
+            font-weight: normal;
+            font-size: x-large;
+        }
+
+        .Frontend {
+            background: #F68ED9;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.47);
+            border-radius: 29px;
+            width: 15%;
+            margin-left: 42%;
+            padding-top: 3%;
+            padding-bottom: 3%;
+            margin-top: -15.8%;
+            text-align: center;
+            font-family: Abel;
+            font-style: normal;
+            font-weight: normal;
+            font-size: x-large;
+        }
+
+        /*Photos*/
+        #ava3_box {
+            background: rgba(246, 142, 217, 0.96);
+            border-radius: 14px;
+            height: 160px;
+            width: 18%;
+            position: relative;
+            margin: -34% 0% 12% 18%;
+        }
+
+        .ava3 {
+            width: 14%;
+            position: relative;
+            margin: -28% 0% 25% 20%;
+            transform: rotate(-15deg);
+        }
+
+        #ava2_box {
+            background: rgba(88, 76, 229, 0.45);
+            border-radius: 14px;
+            height: 200px;
+            width: 18%;
+            position: relative;
+            margin: -60% 0% 12% 70%;
+        }
+
+
+        .ava2 {
+            width: 14%;
+            position: relative;
+            margin: -77% 0% 12% 72%;
+        }
+
+        #ava_box {
+            background: #445566;
+            height: 200px;
+            width: 18%;
+            position: relative;
+            margin: -13% 0% 12% 18%;
+        }
+
+        .ava {
+            width: 14%;
+            position: relative;
+            margin: -32% 0% 25% 20%;
+            transform: rotate(-5deg);
+        }
+
+        /*Portfolio*/
+        .portfolio {
+            background: linear-gradient(130.68deg, #FFFFFF 0%, #F8D084 100.52%);
+            box-shadow: 0px 4px 15px rgba(27, 27, 27, 0.28);
+            border-radius: 29px;
+            width: 70%;
+            margin-top: 2%;
+            margin-bottom: 2%;
+            margin-left: 6%;
+        }
+
+        .text_portfolio {
+            width: 35%;
+            margin-left: 55%;
+            padding-bottom: 10%;
+            padding-top: 5%;
+        }
+
+        h2 .text_portfolio {
+            font-family: Abel;
+            font-style: normal;
+            font-weight: normal;
+            font-size: x-large;
+            align-items: center;
+            color: #111111;
+        }
+
+        h3 .text_portfolio {
+            font-family: Abel;
+            font-style: normal;
+            font-weight: normal;
+            font-size: large;
+            align-items: center;
+            color: #111111;
+        }
+
+        p .text_portfolio {
+            font-family: Abel;
+            font-style: normal;
+            font-weight: normal;
+            font-size: medium;
+            align-items: center;
+            color: #111111;
+        }
+
+        .landing {
+            width: 48%;
+            margin-top: -40%;
+            margin-bottom: 5%;
+            margin-left: 1%;
+        }
+
+        /*Footer*/
+        footer {
+            background: rgba(245, 132, 248, 0.42);
+            width: 70%;
+            margin-left: 6%;
+        }
+
+        .menu_footer {
+            text-align: left;
+            margin-top: -10%;
+            padding-bottom: 3%;
+            padding-left: 5%;
+        }
+
+        address {
+            text-align: center;
+            margin-top: -15%;
+        }
+
+        .logo_footer {
+            text-align: right;
+            margin-right: 15%;
+            margin-top: 0%;
+
+        }
+
+        .copyright {
+            text-align: right;
+            margin-right: -13%;
+            margin-top: 0%;
+        }
+
+        /*Button to top*/
+        .to-top {
+            color: rgb(0, 0, 0);
+            padding-top: 1.8em;
+            display: inline-block;
+            position: relative;
+            border-color: rgb(0, 0, 0);
+            text-decoration: none;
+            transition: all .3s ease-out;
+        }
+
+        .to-top:before {
+            content: '▲';
+            font-size: .9em;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -.7em;
+            border: solid .13em rgb(0, 0, 0);
+            border-radius: 10em;
+            width: 1.4em;
+            height: 1.4em;
+            line-height: 1.3em;
+            border-color: inherit;
+            transition: transform .5s ease-in;
+        }
+
+        .to-top:hover {
+            color: rgb(44, 58, 255);
+            border-color: rgb(44, 58, 255);
+        }
+
+        .to-top:hover:before {
+            transform: rotate(360deg);
+        }
+
+        .button_to_top {
+            text-align: right;
+            margin-right: 5%;
+            margin-top: -13%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class=" menu">
+            <div class="logo">
+                <img src="icon.png" alt="Компьютер, логотип сайта" width="94">
+                <p><a name="top"></a></p>
+                <p>AvoCadoRina</p>
+            </div>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About_me">About me</a></li>
+                <li><a href="#Portfolio">Portfolio</a></li>
+                <li><a href="#Contacts">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="main_page">
+        <div class="hello">
+            <p><a name="Home"></a></p>
+            <h1> Hello </h1>
+            <h2> I am Ekaterina Ustich </h2>
+            <p> I am a front-end developer (html5+css3+js) for 10 months. I have been drawing illustrations in procreate
+                for 2 years . Do you need a website design? Contact me via the contacts button. </p>
+            <button class="contact_me">Contact me</button>
+        </div>
+        <img class="photo" src='Skills.png' alt="Девушка с рамкой из навыков">
+    </section>
+    <section class="my_skills">
+        <div class="UXUI">
+            <p>UX/UI</p>
+        </div>
+        <div class="LogoDesign">
+            <p>Logo<br>
+                design</p>
+        </div>
+        <div class="IconDesign">
+            <p>Icon <br>
+                design</p>
+        </div>
+        <div class="DataAnalysis">
+            <p>Data<br>
+                analysis</p>
+        </div>
+        <div class="Frontend">
+            <p>Frontend <br>
+                HTML5 + <br>
+                CSS3 + JS</p>
+        </div>
+    </section>
+    <section class="about_me">
+        <div class="text_am">
+            <p><a name="About_me"></a></p>
+            <h2>About me</h2>
+            <p>A little about me:</p>
+            <ul>
+                <li>24 years old</li>
+                <li>Currently live in Moscow</li>
+                <li>Work as a risk analyst</li>
+            </ul>
+            <p>Hobbies:</p>
+            <ul>
+                <li>Hiking</li>
+                <li>Intellectual games</li>
+                <li>Digital art</li>
+            </ul>
+            <p>Knowledge of languages:</p>
+            <ul>
+                <li>Spanish (Beginner)</li>
+                <li>English (Advanced)</li>
+                <li>Russian (Native)</li>
+            </ul>
+        </div>
+        <div id="ava_box"></div>
+        <img class="ava" src="orange.jpg" alt="Девушка на оранжевом фоне">
+        <div id="ava2_box"></div>
+        <img class="ava2" src="ava2.jpg" alt="Девушка с улитками">
+        <div id="ava3_box"></div>
+        <img class="ava3" src="profile.jpg" alt="Девушка">
+    </section>
+    <section class="portfolio">
+        <div class="text_portfolio">
+            <p><a name="Portfolio"></a></p>
+            <h2>Portfolio</h2>
+            <h3>Landing for CatStream</h3>
+            <p>Do a 3-month project - landing for CatStream. There are 10 animated pages in Catstam style and database
+                of Catsteam clients.</p>
+        </div>
+        <img class="landing" src="landing.jpg" alt="Лендинг с котиком">
+    </section>
+    <footer>
+        <div class="logo_footer">
+            <a href=""><img src="icon.png" alt="Компьютер, логотип сайта" width="94"></a>
+            <p>AvoCadoRina</p>
+            <p class="copyright"> Copyright &copy; 2021, AvoCadoRina</p>
+        </div>
+        <div class="button_to_top">
+            <a href="#top" class="to-top">Back to top</a>
+        </div>
+        <address>
+            <p><a name="Contacts"></a></p>
+            <p>Contacts</p>
+            <a href="https://telegram.me/AvoCadoRina">Telegram</a><br>
+            <a href="mailto:avocadorina@mail.ru">e-mail</a><br>
+            <a href=" https://www.instagram.com/usticheek/">Instagram</a><br>
+        </address>
+        <div class="menu_footer">
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About_me">About me</a></li>
+                <li><a href="#Portfolio">Portfolio</a></li>
+                <li><a href="#Contacts">Contacts</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
